@@ -1,0 +1,13 @@
+* {
+    background-color: rgb(201, 77, 184);
+    
+}
+::selection {
+    background-color: #20c997;
+    color: rgb(147, 255, 255);
+}
+header {
+    text-align: center;
+    font-family: cursive;
+    margin: 0;
+}
