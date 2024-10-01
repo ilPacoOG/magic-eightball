@@ -20,18 +20,18 @@ let answers = [
 },
 {    
     answer: 'Why not?!',
-    theme: 'nuetral',
+    theme: 'neutral',
 },
 {
     answer: 'Check your horoscope.',
-    theme: 'nuetral',
+    theme: 'neutral',
 },
 {   answer: 'Sure',
     theme: 'positive',
 },
 {
     answer: 'Without a doubt!',
-    theme: 'nuetral',
+    theme: 'neutral',
 },
 {   
     answer: 'Chances are slim.',
@@ -39,16 +39,28 @@ let answers = [
 },
 {
     answer: 'What does your conscience say?',
-    theme: 'nuetral',
+    theme: 'neutral',
 }
 ]
 
-function displayAnswer() {
-    let randomIndex = Math.floor(Math.random() * answers.length);
-    let selectedAnswer = answers[randomIndex];
+function getAnswer() {
+    let.question = document.getElementById('question-input').value; 
 
-    console.log('Answer:', selectedAnswer.answer);
-    console.assert('Theme:', selectedAnswer.theme);
+    let randomIndex = Math.floor(Math.random() * answers.length);
+    let selectedAnswer = answers[randomIndex]; 
+    
+    document.getElementById("answer-output").innerText = selectedAnswer.answer;
+    document.getElementById("theme-output").innerText = selectedAnswer.theme;
+    
+    
+    if (question.trim() !== "") {
+        document.getElementById('response').innerText = "You asked: " + question;
+    } else {
+        document.getElementById('response').innerText = "Please type a question.";
+    }
+
+    document.body.classList.remove('positive', 'neutral', 'negative');
+    
 
     if (selectedAnswer.theme === 'positive') {
         document.body.style.backgroundColor = 'purple';
@@ -57,5 +69,4 @@ function displayAnswer() {
     } else if (selectedAnswer.theme === 'negative') {
         document.body.style.backgroundColor = 'red';
     }
-}
-displayAnswer();
+};
