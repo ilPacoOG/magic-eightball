@@ -1,0 +1,84 @@
+* {
+    background-color: rgb(201, 77, 184);
+    
+}
+::selection {
+    background-color: #20c997;
+    color: rgb(147, 255, 255);
+}
+header {
+    text-align: center;
+    font-family: cursive;
+    margin: 0;
+    align-items: flex-start;
+}
+
+/* changes by kane */
+/* light theme */
+
+  
+  /* end of changes by kane */
+
+  section {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+/* Container for the input and button */
+.container {
+    text-align: center;
+    padding: 20px;
+    
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 400px;
+}
+
+/* Input box styling */
+#question-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007BFF;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Button styling */
+#submit-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Response text styling */
+#response {
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+body.body-positive {
+    background-color: lightgreen;
+}
+
+body.body-neutral {
+    background-color: lightgray;
+}
+
+body.body-negative {
+    background-color: lightcoral;
+}
