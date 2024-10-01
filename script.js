@@ -1,4 +1,8 @@
-let answers = [{
+
+
+
+let answers = [
+{
     answer: 'I doubt it.',
     theme: 'negative'
 },
@@ -38,3 +42,20 @@ let answers = [{
     theme: 'nuetral',
 }
 ]
+
+function displayAnswer() {
+    let randomIndex = Math.floor(Math.random() * answers.length);
+    let selectedAnswer = answers[randomIndex];
+
+    console.log('Answer:', selectedAnswer.answer);
+    console.assert('Theme:', selectedAnswer.theme);
+
+    if (selectedAnswer.theme === 'positive') {
+        document.body.style.backgroundColor = 'purple';
+    } else if (selectedAnswer.theme === 'neutral') {
+        document.body.style.backgroundColor = 'lightgray';
+    } else if (selectedAnswer.theme === 'negative') {
+        document.body.style.backgroundColor = 'red';
+    }
+}
+displayAnswer();
