@@ -6,16 +6,21 @@
     <title>Question Input</title>
     <style>
         /* General styling */
-        body {
+        section {
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f4f4f4;
+            
         }
-
+        header {
+            text-align: center;
+            font-family: cursive;
+            margin: 0;
+            align-items: flex-start;
+}
         /* Container for the input and button */
         .container {
             text-align: center;
@@ -60,12 +65,18 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>Magic 8 Ball</h1>
+        <h2>~You ask the Questions~<br>~we will give you the answer~</h2>
+    </header>
+<section>
     <div class="container">
         <h1>Ask a Question</h1>
         <input type="text" id="question-input" placeholder="Type your question here..." />
         <button id="submit-btn">Submit</button>
         <p id="response"></p>
     </div>
+</section>
 
     <script>
         document.getElementById('submit-btn').addEventListener('click', function() {
