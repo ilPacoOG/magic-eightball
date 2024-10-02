@@ -1,29 +1,115 @@
+
+footer {
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    background-color: inherit;
+}
+header {
+    text-align: center;
+    font-family: serif;
+    margin: 0;
+    align-items: flex-start;
+    background-color: #D3C5E5;
+    border-bottom-left-radius: -20px;
+    border-bottom-right-radius: -20px;
+    padding-bottom: 20px;
+}
+
+/* Header theme colors */
+header.header-positive {
+    background-color: #2C5F2D;
+
 body {
     background-color: rgb(201, 77, 184);
     background-image: url("https://as2.ftcdn.net/v2/jpg/08/17/00/59/1000_F_817005997_YtByvz9FEbs3pqUL9SH8bdcdwGrdyre8.jpg");
+
 }
 
-::selection {
-    background-color: #20c997;
-    color: rgb(147, 255, 255);
+header.header-neutral {
+    background-color: #2F3C7E;
 }
 
-header {
+header.header-negative {
+    background-color: yellow;
+    color: black;
+}
+
+/* Body theme colors */
+body.body-positive {
+    background-color: #97BC62;
+    color: black;
+}
+
+body.body-neutral {
+    background-color: #c5b8b9;
+    color: rgb(0, 0, 0);
+}
+
+body.body-negative {
+    background-color: black;
+    color: white;
+}
+
+/* Image styling */
+#theme-image {
+    max-width: 300px;
+    max-height: 300px;
+    margin-top: 20px;
+    display: block;
+}
+
+
+h3 {
     text-align: center;
     font-family: cursive;
     margin: 0;
-    align-items: flex-start;
+    align-items: flex-start; 
 }
 
+body {
+    background-color: #735DA5; /* Original background color */
+}
+
+body.body-positive {
+    background-color: rgb(76, 122, 76);
+    color: black; /* Positive theme background */
+}
+
+body.body-neutral {
+    background-color: pastel pink;
+    color: rgb(0, 0, 0); /* Neutral theme background */
+}
+
+body.body-negative {
+    background-color: black;
+    color: white; /* Negative theme background */
+}
+
+
+* {/* Resetting global styles */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 section {
     font-family: Arial, sans-serif;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
-    margin: 0px;
+    margin: 0;
 }
+
+
+.container {/* Container for the input and button */
+    text-align: left;
+    width: 450px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 
 /* theme changes for the connotation */
 body.body-positive {
@@ -42,7 +128,7 @@ body.body-negative {
 
 
 /* Container for the input and button */
-.container {
+/* .container {
     text-align: center;
     padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -50,21 +136,22 @@ body.body-negative {
     width: 400px;
     margin: 0px; 
     border: 1px solid pink;
-    background-color:rgb(201, 77, 184);
+    background-color:rgb(201, 77, 184); */
+
 }
 
-/* Input box styling */
-#question-input {
+#question-input {/* Input box styling */
     width: 80%;
     padding: 10px;
     font-size: 16px;
     border: 2px solid #007BFF;
+    background-color: i;
     border-radius: 4px;
     margin-bottom: 10px;
 }
 
-/* Button styling */
-#submit-btn {
+
+#submit-btn {/* Button styling */
     padding: 10px 20px;
     background-color: #007BFF;
     color: white;
@@ -78,16 +165,36 @@ body.body-negative {
     background-color: #0056b3;
 }
 
-/* Response text styling */
-#response {
-    margin-top: 20px;
-    font-size: 18px;
-    color: white;
+#history-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 99%;
+    max-width: 300px;
+    padding: 20px;
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+    z-index: 100;
+    overflow-y: auto;
+    max-height: 250px;
 }
 
-/* answer-output styling */
-#answer-output {
+
+#response {/* Response text styling */
     margin-top: 20px;
+    font-size: 20px;
+    color: inherit;
+
+}
+
+
+#answer-output {/* answer-output styling */
+    display: flex;
+    position: center ;
+    bottom: 20%;
     font-size: 18px;
-    color: white;
+    color: inherit;
+    padding-top: 10px;
+    
 }
