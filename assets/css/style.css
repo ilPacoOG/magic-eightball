@@ -1,6 +1,6 @@
-* {
+body {
     background-color: rgb(201, 77, 184);
-
+    background-image: url("https://as2.ftcdn.net/v2/jpg/08/17/00/59/1000_F_817005997_YtByvz9FEbs3pqUL9SH8bdcdwGrdyre8.jpg");
 }
 
 ::selection {
@@ -25,6 +25,22 @@ section {
     margin: 0px;
 }
 
+/* theme changes for the connotation */
+body.body-positive {
+    background-color: yellow; /* Positive theme background */
+    background-image: url('https://media.istockphoto.com/id/675508610/photo/heaven-gate.jpg?s=2048x2048&w=is&k=20&c=hWJZuM5PLnnp_uDhFIH40CziZLkR2AXzLv2JOM-JTXU=');
+}
+body.body-neutral {
+    background-color: rgb(201, 77, 184); /* Neutral theme background */
+    background-image: url('https://media.tenor.com/uvhRHjmPKSoAAAAi/nothing-wrong-with-that-sonny-fisher.gif');
+}
+body.body-negative {
+    background-color: red; /* Negative theme background */
+    background-image: url('https://officeinfluence.com/wp-content/uploads/2020/02/SayingNo.png');
+}
+/* ================================================================== */
+
+
 /* Container for the input and button */
 .container {
     text-align: center;
@@ -34,6 +50,7 @@ section {
     width: 400px;
     margin: 0px; 
     border: 1px solid pink;
+    background-color:rgb(201, 77, 184);
 }
 
 /* Input box styling */
