@@ -12,26 +12,27 @@
 <body>
     <header>
         <h1>Magic 8 Ball</h1>
-        <h2>~You ask the Questions~<br>~we will give you the answer~</h2>
+        <h2>You ask the Questions, we give the Answers</h2>
     </header>
+    <h3>(May the odds be in your favor)</h3>
+
     <section>
-        <!-- container for the question input and submit button -->
         <div class="container">
-            <h2>Ask a Question</h2>
-            <input type="text" id="question-input" placeholder="Type your question here..." />
-            <button id="submit-btn">Submit</button>
-            <p id="response"></p>
+            <input type="text" id="question-input" placeholder="What is your question?" />
+            <button id="submit-btn">Roll the Dice</button>
         </div>
-        <!-- container for the answers from magic 8ball -->
-        <div class="container">
-            <h2>Answer:</h2>
+        
+
+        <div class="answer-output">
             <p id="answer-output"></p>
+            <img id="theme-image">
         </div>
-        <div class="container">
-            <h2>Question-Answer History:</h2>
-            <div id="history-container"></div>
+
+        <div class="container" id="history-container">
+            <h2>History:</h2>
         </div>
     </section>
+
 </body>
 
 </html>
