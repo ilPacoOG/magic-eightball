@@ -162,3 +162,19 @@ section {
     padding-top: 10px;
     
 }
+@media (max-width: 500px) {
+    section {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .container {
+        width: 100%; /* Take full width on smaller screens */
+        margin: 10px 0; /* Add margin to separate stacked containers */
+    }
+
+    #history-container {
+        position: relative; /* Change from fixed to relative so it stacks normally */
+        max-width: 100%; /* Make the container full width */
+        margin-top: 20px; /* Add some spacing between history and other sections */
+    }
+}
