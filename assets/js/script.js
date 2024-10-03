@@ -1,17 +1,15 @@
 let answers = [
-    { answer: 'I doubt it.', theme: 'negative', image: 'negative1.jpg' },
-    { answer: 'The stars are aligned', theme: 'positive', image: 'positive1.jpg' },
-    { answer: 'The bones say no.', theme: 'negative', image: 'negative2.jpg' },
-    { answer: 'You betcha!', theme: 'positive', image: 'positive2.jpg' },
-    { answer: 'Why not?!', theme: 'neutral', image: 'neutral1.jpg' },
-    { answer: 'Check your horoscope.', theme: 'neutral', image: 'neutral2.jpg' },
-    { answer: 'Im not stopping you DO IT ', theme: 'positive', image: 'positive3.jpg' },
-    { answer: 'Without a doubt!', theme: 'positive', image: 'positive4.jpg' },
-    { answer: 'Chances are slim.', theme: 'negative', image: 'negative3.jpg' },
-    { answer: 'What does your conscience say?', theme: 'neutral', image: 'neutral3.jpg' }
+    { answer: 'I doubt it.', theme: 'negative' },
+    { answer: 'The stars are aligned', theme: 'positive' },
+    { answer: 'The bones say no.', theme: 'negative' },
+    { answer: 'You betcha!', theme: 'positive' },
+    { answer: 'Why not?!', theme: 'neutral' },
+    { answer: 'Check your horoscope.', theme: 'neutral' },
+    { answer: 'I’m not stopping you, DO IT!', theme: 'positive' },
+    { answer: 'Without a doubt!', theme: 'positive' },
+    { answer: 'Chances are slim.', theme: 'negative' },
+    { answer: 'What does your conscience say?', theme: 'neutral' }
 ];
-
-
 
 // Function to return a random answer and display it on the page
 function getAnswer() {
@@ -25,35 +23,53 @@ function getAnswer() {
     let randomIndex = Math.floor(Math.random() * answers.length);
     let selectedAnswer = answers[randomIndex];
     
-    // Display the random answer and its theme
+    // Display the random answer
     document.getElementById("answer-output").innerText = selectedAnswer.answer;
 
-    // Remove old classes and add the new one
+    
+     
     document.body.classList.remove('body-positive', 'body-neutral', 'body-negative');
     document.querySelector("header").classList.remove('header-positive', 'header-neutral', 'header-negative');
+    // document.getElementById("input-container").classList.remove('container-positive', 'container-neutral', 'container-negative');
     
     if (selectedAnswer.theme === 'positive') {
         document.body.classList.add('body-positive');
         document.querySelector("header").classList.add('header-positive');
+        // document.getElementById("input-container").classList.add('container-positive');
     } else if (selectedAnswer.theme === 'neutral') {
         document.body.classList.add('body-neutral');
         document.querySelector("header").classList.add('header-neutral');
+        // document.getElementById("input-container").classList.add('container-neutral');
     } else if (selectedAnswer.theme === 'negative') {
         document.body.classList.add('body-negative');
         document.querySelector("header").classList.add('header-negative');
+        // document.getElementById("input-container").classList.add('container-negative');
     }
+    // console.log(document.querySelector(".container"));
+    
+    triggerBallSpin();
 
-    // Update image based on the theme
-    let imgElement = document.getElementById('theme-image');
-    imgElement.src = `./assets/images/${selectedAnswer.image}`;
-
-    // Save the question-answer pair to local storage
+    
     saveToLocalStorage(question, selectedAnswer.answer);
 }
 
+// Function to handle ball spinning animation
+function triggerBallSpin() {
+    const ball = document.getElementById("ball");
+    ball.classList.add("spin");
+
+    // Stop spinning after the animation
+    setTimeout(() => {
+        ball.classList.remove("spin");
+    }, 1000); 
+}
+
+// Event listener for button click
+document.getElementById('submit-btn').addEventListener('click', function() {
+    getAnswer();
+});
 
 
-// Function to save question-answer pair to local storage
 function saveToLocalStorage(question, answer) {
     let history = JSON.parse(localStorage.getItem('magic8BallHistory')) || [];
     history.push({ question: question, answer: answer });
@@ -61,8 +77,6 @@ function saveToLocalStorage(question, answer) {
 
     displayHistory(); // Live update history
 }
-
-
 
 // Function to display history
 function displayHistory() {
@@ -76,12 +90,6 @@ function displayHistory() {
         historyContainer.appendChild(historyItem);
     });
 }
-
-
-
-document.getElementById('submit-btn').addEventListener('click', function() {
-    getAnswer();
-});
 
 
 window.onload = function () {
