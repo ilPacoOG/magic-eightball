@@ -15,7 +15,7 @@ document.addEventListener("mousemove", function(e) {
     body.appendChild(circle);
     setTimeout(function() {
         circle.remove();
-    }, 1800);
+    }, 500);
 });
 
 
