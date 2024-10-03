@@ -1,4 +1,4 @@
-document.addEventListener("mousemove", function (e) {
+document.addEventListener("mousemove", function(e) {
     let body = document.querySelector("body");
     let circle = document.createElement("span");
     let x = e.pageX;  // Use pageX instead of offsetX for accuracy
@@ -13,7 +13,7 @@ document.addEventListener("mousemove", function (e) {
     circle.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
     circle.style.pointerEvents = "none";  // Prevents interaction with the circle
     body.appendChild(circle);
-    setTimeout(function () {
+    setTimeout(function() {
         circle.remove();
     }, 500);
 });
@@ -35,42 +35,39 @@ let answers = [
 // Function to return a random answer and display it on the page
 function getAnswer() {
     let question = document.getElementById("question-input").value;
-
+    
     if (question.trim() === "") {
         alert("Please ask a question!");
         return;
     }
-
+    
     let randomIndex = Math.floor(Math.random() * answers.length);
     let selectedAnswer = answers[randomIndex];
-
+    
     // Display the random answer
     document.getElementById("answer-output").innerText = selectedAnswer.answer;
 
-
-
+    
+     
     document.body.classList.remove('body-positive', 'body-neutral', 'body-negative');
     document.querySelector("header").classList.remove('header-positive', 'header-neutral', 'header-negative');
-    // document.getElementById("input-container").classList.remove('container-positive', 'container-neutral', 'container-negative');
-
+        
     if (selectedAnswer.theme === 'positive') {
         document.body.classList.add('body-positive');
         document.querySelector("header").classList.add('header-positive');
-        // document.getElementById("input-container").classList.add('container-positive');
+        
     } else if (selectedAnswer.theme === 'neutral') {
         document.body.classList.add('body-neutral');
         document.querySelector("header").classList.add('header-neutral');
-        // document.getElementById("input-container").classList.add('container-neutral');
+        
     } else if (selectedAnswer.theme === 'negative') {
         document.body.classList.add('body-negative');
         document.querySelector("header").classList.add('header-negative');
-        // document.getElementById("input-container").classList.add('container-negative');
-    }
-    // console.log(document.querySelector(".container"));
-
+        
+    }   
+    
     triggerBallSpin();
-
-
+    
     saveToLocalStorage(question, selectedAnswer.answer);
 }
 
@@ -82,11 +79,11 @@ function triggerBallSpin() {
     // Stop spinning after the animation
     setTimeout(() => {
         ball.classList.remove("spin");
-    }, 1000);
+    }, 1000); 
 }
 
 // Event listener for button click
-document.getElementById('submit-btn').addEventListener('click', function () {
+document.getElementById('submit-btn').addEventListener('click', function() {
     getAnswer();
 });
 
@@ -103,7 +100,7 @@ function saveToLocalStorage(question, answer) {
 function displayHistory() {
     let history = JSON.parse(localStorage.getItem('magic8BallHistory')) || [];
     let historyContainer = document.getElementById('history-container');
-    historyContainer.innerHTML = '';
+    historyContainer.innerHTML = ''; 
 
     history.forEach(entry => {
         let historyItem = document.createElement('p');
@@ -113,6 +110,14 @@ function displayHistory() {
 }
 
 
+
 window.onload = function () {
     displayHistory();
+    
+    document.getElementById('clear-local-storage').addEventListener('click', clearHistory);
 };
+
+function clearHistory() {
+    localStorage.removeItem('magic8BallHistory');
+    displayHistory(); // Update the history display after clearing
+}
