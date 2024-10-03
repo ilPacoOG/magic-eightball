@@ -1,23 +1,23 @@
-Read Me:
 
-#Magic 8-Ball 
 
-#Overview
+# Magic 8-Ball 
+
+## Overview
 The Magic 8-Ball Application is an interactive web-based app that mimics the experience of asking the classic Magic 8-Ball for answers. Users can ask any question, and the app will provide a random response along with changing themes and an image to match the response's tone. Additionally, the app stores a history of asked questions and answers using local storage.
 
-#Features
+## Features
 Randomized Answers: Users receive a randomized answer to their question, such as "Yes," "No," or neutral responses.
 
 Dynamic Theme Changes: The background color, header, and image change based on the type of response (positive, neutral, or negative).
 
 Local Storage: The app stores a history of all questions asked and their corresponding answers, which can be viewed at the bottom of the page.
 
-#Installation :
+## Installation :
 
 This is a static website. No installation is required beyond just cloning the repository.
 
 
-#Future Enhancements 
+## Future Enhancements 
 
 Additional Responses: Expanding the answer pool for more variety.
 
@@ -27,7 +27,7 @@ Mobile Enhancements: Further optimization for mobile devices, improving user exp
 
 Voice Input: Enabling users to ask questions via voice commands.
 
-#Contributors
+## Contributors
 
 Michael F.: Overall project contributions (Random answer generation functionality, CSS framework integration.)
 
