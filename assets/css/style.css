@@ -10,8 +10,6 @@ header {
     margin: 0;
     align-items: flex-start;
     background-color: #D3C5E5;
-    border-bottom-left-radius: -20px;
-    border-bottom-right-radius: -20px;
     padding-bottom: 20px;
 }
 
@@ -44,15 +42,53 @@ body.body-negative {
     color: white;
 }
 
-/* Image styling */
-#theme-image {
+/* 
+.container-positive {
+    background-color: #97BC62;
+}
+
+.container-neutral {
+    background-color: #c5b8b9;
+}
+
+.container-negative {
+    background-color: black;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.container-positive, .container-neutral, .container-negative {
+    color: inherit;
+    border: 1px solid #fff;
+}
+
+#input-container {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+} */
+
+/* Spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#ball {
     max-width: 300px;
     max-height: 300px;
     margin-top: 20px;
     display: block;
 }
 
+.spin {
+    animation: spin 1s ease-in-out; 
+}
 
+/* Other styles */
 h3 {
     text-align: center;
     font-family: cursive;
@@ -64,23 +100,7 @@ body {
     background-color: #735DA5; /* Original background color */
 }
 
-body.body-positive {
-    background-color: rgb(76, 122, 76);
-    color: black; /* Positive theme background */
-}
-
-body.body-neutral {
-    background-color: pastel pink;
-    color: rgb(0, 0, 0); /* Neutral theme background */
-}
-
-body.body-negative {
-    background-color: black;
-    color: white; /* Negative theme background */
-}
-
-
-* {/* Resetting global styles */
+* { /* Resetting global styles */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -95,27 +115,28 @@ section {
     height: 100vh;
     margin: 0;
 }
-
-.container {/* Container for the input and button */
+/* Container for the input and button */
+.container { 
     text-align: left;
     width: 450px;
-  background: #fff;
-  padding: 30px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    background: transparent;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0px 0px 10px rgba(0,0,0,0.1); */
 }
 
-#question-input {/* Input box styling */
+#question-input { /* Input box styling */
     width: 80%;
     padding: 10px;
     font-size: 16px;
     border: 2px solid #007BFF;
-    background-color: i;
+    background-color: inherit;
     border-radius: 4px;
     margin-bottom: 10px;
 }
 
-
-#submit-btn {/* Button styling */
+#submit-btn { /* Button styling */
     padding: 10px 20px;
     background-color: #007BFF;
     color: white;
@@ -128,6 +149,14 @@ section {
 #submit-btn:hover {
     background-color: #0056b3;
 }
+
+.result-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}    
 
 #history-container {
     position: fixed;
@@ -144,23 +173,19 @@ section {
     max-height: 250px;
 }
 
-
-#response {/* Response text styling */
+#response { /* Response text styling */
     margin-top: 20px;
     font-size: 20px;
     color: inherit;
-
 }
 
-
-#answer-output {/* answer-output styling */
+#answer-output { /* Answer-output styling */
     display: flex;
-    position: center ;
+    position: center;
     bottom: 20%;
     font-size: 18px;
     color: inherit;
     padding-top: 10px;
-    
 }
 @media (max-width: 500px) {
     section {
