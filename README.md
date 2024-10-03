@@ -36,3 +36,11 @@ Kane E.: Overall project contributions (Local storage integration and history di
 Rani: Overall project contributions (Core functionality implementation and event handling, UI enhancements,.)
 
 Michele Ferrario: Overall project contributions (theme changes ,UI enhancements, CSS framework integration.)
+
+## Scrrenshot
+
+![image of the magic 8 ball](image-1.png)
+
+## link
+
+https://ilpacoog.github.io/magic-eightball/
