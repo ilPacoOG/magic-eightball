@@ -4,6 +4,7 @@ footer {
     line-height: 60px;
     background-color: inherit;
 }
+
 header {
     text-align: center;
     font-family: "Sixtyfour Convergence", sans-serif;
@@ -44,39 +45,16 @@ body.body-negative {
     color: white;
 }
 
-/* 
-.container-positive {
-    background-color: #97BC62;
-}
-
-.container-neutral {
-    background-color: #c5b8b9;
-}
-
-.container-negative {
-    background-color: black;
-}
-
-.container {
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.container-positive, .container-neutral, .container-negative {
-    color: inherit;
-    border: 1px solid #fff;
-}
-
-#input-container {
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-} */
 
 /* Spin animation */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #ball {
@@ -87,7 +65,7 @@ body.body-negative {
 }
 
 .spin {
-    animation: spin 1s ease-in-out; 
+    animation: spin 1s ease-in-out;
 }
 
 /* Other styles */
@@ -95,10 +73,11 @@ h3 {
     text-align: center;
     font-family: "Rubik Mono One", monospace;
     margin: 0;
-    align-items: flex-start; 
+    align-items: flex-start;
     font-size: medium;
-    
+
 }
+
 h2 {
     font-family: "Bangers", system-ui;
     font-size: xx-large;
@@ -106,10 +85,12 @@ h2 {
 }
 
 body {
-    background-color: #735DA5; /* Original background color */
+    background-color: #735DA5;
+    /* Original background color */
 }
 
-* { /* Resetting global styles */
+* {
+    /* Resetting global styles */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -124,8 +105,9 @@ section {
     height: 100vh;
     margin: 0;
 }
+
 /* Container for the input and button */
-.container { 
+.container {
     text-align: left;
     width: 450px;
     background: transparent;
@@ -135,7 +117,8 @@ section {
     /* box-shadow: 0px 0px 10px rgba(0,0,0,0.1); */
 }
 
-#question-input { /* Input box styling */
+#question-input {
+    /* Input box styling */
     width: 80%;
     padding: 10px;
     font-size: 16px;
@@ -146,7 +129,8 @@ section {
     margin-bottom: 10px;
 }
 
-#submit-btn { /* Button styling */
+#submit-btn {
+    /* Button styling */
     padding: 10px 20px;
     background-color: #007BFF;
     color: white;
@@ -166,7 +150,7 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}    
+}
 
 #history-container {
     position: fixed;
@@ -186,13 +170,15 @@ section {
 }
 
 
-#response { /* Response text styling */
+#response {
+    /* Response text styling */
     margin-top: 20px;
     font-size: 20px;
     color: inherit;
 }
 
-#answer-output { /* Answer-output styling */
+#answer-output {
+    /* Answer-output styling */
     display: flex;
     position: center;
     bottom: 20%;
@@ -200,40 +186,48 @@ section {
     color: inherit;
     padding-top: 10px;
 }
+
 @media (max-width: 500px) {
     section {
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: column;
+        /* Stack elements vertically */
     }
 
     .container {
-        width: 100%; /* Take full width on smaller screens */
-        margin: 10px 0; /* Add margin to separate stacked containers */
+        width: 100%;
+        /* Take full width on smaller screens */
+        margin: 10px 0;
+        /* Add margin to separate stacked containers */
     }
 
     #history-container {
-        position: relative; /* Change from fixed to relative so it stacks normally */
-        max-width: 100%; /* Make the container full width */
-        margin-top: 20px; /* Add some spacing between history and other sections */
+        position: relative;
+        /* Change from fixed to relative so it stacks normally */
+        max-width: 100%;
+        /* Make the container full width */
+        margin-top: 20px;
+        /* Add some spacing between history and other sections */
     }
 }
+
 ::-webkit-scrollbar {
-    width: 7px; 
+    width: 7px;
 }
 
 
 ::-webkit-scrollbar-track {
-    background: inherit; 
-    border-radius: 10px; 
+    background: inherit;
+    border-radius: 10px;
 }
 
 
 ::-webkit-scrollbar-thumb {
-    background-color: #888; 
+    background-color: #888;
     border-radius: 10px;
-    border: 1px solid #f1f1f1; 
+    border: 1px solid #f1f1f1;
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #555; 
+    background-color: #555;
 }

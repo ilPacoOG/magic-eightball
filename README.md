@@ -39,7 +39,7 @@ Michele Ferrario: Overall project contributions (theme changes ,UI enhancements,
 
 ## Scrrenshot
 
-![image of the magic 8 ball](image-1.png)
+![image of the magic 8 ball](./assets/images/image-1.png)
 
 ## link
 
