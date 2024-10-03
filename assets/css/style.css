@@ -6,10 +6,12 @@ footer {
 }
 header {
     text-align: center;
-    font-family: serif;
+    font-family: "Sixtyfour Convergence", sans-serif;
     margin: 0;
     align-items: flex-start;
     background-color: #D3C5E5;
+    border-bottom-left-radius: -20px;
+    border-bottom-right-radius: -20px;
     padding-bottom: 20px;
 }
 
@@ -91,9 +93,16 @@ body.body-negative {
 /* Other styles */
 h3 {
     text-align: center;
-    font-family: cursive;
+    font-family: "Rubik Mono One", monospace;
     margin: 0;
     align-items: flex-start; 
+    font-size: medium;
+    
+}
+h2 {
+    font-family: "Bangers", system-ui;
+    font-size: xx-large;
+
 }
 
 body {
@@ -162,7 +171,7 @@ section {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 99%;
+    width: 80%;
     max-width: 300px;
     padding: 20px;
     background-color: inherit;
@@ -170,8 +179,11 @@ section {
     box-shadow: none;
     z-index: 100;
     overflow-y: auto;
-    max-height: 250px;
+    max-height: 200px;
+    text-align: left;
+    font-family: "Covered By Your Grace", cursive;
 }
+
 
 #response { /* Response text styling */
     margin-top: 20px;
@@ -202,4 +214,25 @@ section {
         max-width: 100%; /* Make the container full width */
         margin-top: 20px; /* Add some spacing between history and other sections */
     }
+}
+::-webkit-scrollbar {
+    width: 7px; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: inherit; 
+    border-radius: 10px; 
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 10px;
+    border: 1px solid #f1f1f1; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
 }
