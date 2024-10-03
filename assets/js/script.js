@@ -1,3 +1,24 @@
+document.addEventListener("mousemove", function(e) {
+    let body = document.querySelector("body");
+    let circle = document.createElement("span");
+    let x = e.pageX;  // Use pageX instead of offsetX for accuracy
+    let y = e.pageY;
+    circle.style.position = "absolute";
+    circle.style.left = x + "px";
+    circle.style.top = y + "px";
+    let size = Math.random() * 10;
+    circle.style.width = 1 + size + "px";
+    circle.style.height = 1 + size + "px";
+    circle.style.borderRadius = "50%";
+    circle.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+    circle.style.pointerEvents = "none";  // Prevents interaction with the circle
+    body.appendChild(circle);
+    setTimeout(function() {
+        circle.remove();
+    }, 1800);
+});
+
+
 let answers = [
     { answer: 'I doubt it.', theme: 'negative' },
     { answer: 'The stars are aligned', theme: 'positive' },
