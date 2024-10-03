@@ -17,11 +17,13 @@
         <h1>Magic 8 Ball</h1>
         <h2>You ask the Questions, we give the Answers</h2>
     </header>
-    <!-- Button trigger modal -->
+
+  
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Instructions
     </button>
-    <!-- Modal -->
+
+   
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -31,27 +33,27 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Do you really need instructions ? 
+                    Do you really need instructions? 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            
                 </div>
             </div>
         </div>
     </div>
+
     <h3>(May the odds be in your favor)</h3>
 
     <section>
         <div class="container">
             <input type="text" id="question-input" placeholder="What is your question?" />
-            <button id="submit-btn">Roll the Dice</button>
+            <button id="submit-btn">Spin the ball!</button>
+            
         </div>
-        
-
-        <div class="answer-output">
+        <div class="result-container">    
+            <img id="ball" alt= "Magic 8 ball" src="./assets/images/8ball.png">
             <p id="answer-output"></p>
-            <img id="theme-image">
+                       
         </div>
 
         <div class="container" id="history-container">
